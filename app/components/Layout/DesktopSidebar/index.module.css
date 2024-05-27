@@ -1,8 +1,9 @@
 .sidebarMain {
-  width: 250px;
+  position: fixed;
+  left: 0;
+  width: 230px;
   height: 100vh;
   overflow-y: scroll;
-  background-color: antiquewhite;
   padding: 1rem;
 }
 
@@ -15,6 +16,11 @@
   gap: 1rem;
 }
 
+.sidebarMain .navInnerList {
+  gap: 0.5rem;
+  padding: 0.5rem 0 0 0;
+}
+
 .navLink {
   text-decoration: none;
   color: #707070;
@@ -23,8 +29,23 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  transition: 0.3s ease;
 }
 
-.Navicon {
-  font-size: 24px;
+.navInnerList .navLink {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navLink:hover {
+  color: black;
+}
+
+.navIcon {
+  font-size: 20px;
+  width: 20px;
+}
+
+.navInnerList .navIcon {
+  font-size: 14px;
 }

@@ -1,0 +1,13 @@
+.main {
+  background-color: var(--primary-bg-color);
+  border-radius: var(--global-radius);
+  padding: var(--global-gap);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main > h1 {
+  font-size: 24px;
+  font-weight: 800;
+}

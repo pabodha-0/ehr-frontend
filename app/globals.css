@@ -1,8 +1,49 @@
+html {
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #eeeeee;
+  --primary-font-color: #1e1e1e;
+  --secondary-font-color: #707070;
+  --warning-color: #ff6347;
+  --success-color: #4169e1;
+
+  --global-gap: 20px;
+  --global-radius: 8px;
+  --global-transition: 0.3s ease;
+}
+
 * {
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.inputField {
+  outline: none;
+  border: 1px solid var(--secondary-font-color);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-weight: 500;
+}
+
+.inputField:disabled {
+  background-color: var(--secondary-bg-color);
+  border: none;
 }

@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--global-gap);
+}
+
+.gridWrapper {
+  margin-top: var(--global-gap);
+  display: grid;
+  gap: 10px;
+}
+
+.gridWrapper > h6 {
+  color: var(--primary-font-color);
+}
+
+.subGridWrapper {
+  display: grid;
+  gap: 4px;
+}

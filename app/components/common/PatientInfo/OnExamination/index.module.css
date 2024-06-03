@@ -1,0 +1,102 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--global-gap);
+  margin-top: var(--global-gap);
+}
+
+.grid h6 {
+  margin-bottom: 4px;
+}
+
+.booleanWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.booleanWrapper input {
+  display: none;
+}
+
+.booleanBtn {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-font-color);
+  width: 80px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: var(--global-radius);
+  cursor: pointer;
+  transition: var(--global-transition);
+}
+
+.booleanWrapper input:checked + .booleanBtn {
+  background-color: var(--primary-font-color);
+  color: var(--primary-bg-color);
+}
+
+.equalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--global-gap);
+}
+
+.tempWarning,
+.tempNoWarning {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--global-radius);
+  background-color: var(--secondary-bg-color);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tempWarning {
+  background-color: var(--warning-color);
+}
+
+.subGrid {
+  font-size: 14px;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.verticalGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bpGrid {
+  display: grid;
+  grid-template-columns: auto 40px auto;
+}
+
+.bpGrid hr {
+  rotate: 45deg;
+  transform: scaleY(1.8);
+}
+
+.bpGridWrapper {
+  display: grid;
+  grid-template-columns: 10px auto;
+  gap: var(--global-gap);
+  font-size: 14px;
+  align-items: center;
+}
+
+.visionGridWrapper {
+  display: grid;
+  grid-template-columns: 60px auto;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}

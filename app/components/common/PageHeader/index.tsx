@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./index.module.css";
 
-const PageHeader = () => {
+const PageHeader = ({ header }: { header: string }) => {
   return (
     <div className={styles.main}>
-      <h1>Add Patient</h1>
+      <h1>{header}</h1>
       <div>
         {/* user image */}
         <span>Pabodha Pathirana</span>

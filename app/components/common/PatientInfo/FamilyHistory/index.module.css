@@ -13,6 +13,22 @@
   margin-top: 10px;
 }
 
+.headerBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.headerBox > .icon {
+  font-size: 14px;
+  transition: var(--global-transition);
+}
+
+.headerBox > .iconReverse {
+  transform: rotateX(180deg);
+}
+
 .inputWrapper {
   display: grid;
   gap: 4px;

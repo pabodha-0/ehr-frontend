@@ -32,7 +32,7 @@ const PatientComplaint = () => {
           {Array.from(Array(complaintsAmount)).map((_, i) => (
             <div key={i} className={styles.inputWrapper}>
               <InputWithSuggestion
-                inputName="patientSymptom"
+                inputName="patientSymptoms"
                 suggestionList={complaintsSuggestionList}
               />
               <hr />

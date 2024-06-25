@@ -14,11 +14,11 @@ const OnExamination = () => {
           <h6>Pale</h6>
           <div className={styles.booleanWrapper}>
             <label>
-              <input type="radio" name="pale" id="" />
+              <input type="radio" name="patientIsPale" />
               <div className={styles.booleanBtn}>Yes</div>
             </label>
             <label>
-              <input type="radio" name="pale" id="" />
+              <input type="radio" name="patientIsPale" />
               <div className={styles.booleanBtn}>No</div>
             </label>
           </div>
@@ -30,6 +30,7 @@ const OnExamination = () => {
             <label className="inputField">
               <input
                 type="text"
+                name="patientTemperature"
                 inputMode="numeric"
                 onChange={(e: any) => setTemp(e.target.value)}
               />
@@ -45,34 +46,34 @@ const OnExamination = () => {
 
         <div>
           <h6>Ear</h6>
-          <input type="text" name="" className="inputField" />
+          <input type="text" name="patientEarInfectionType" className="inputField" />
         </div>
 
         <div>
           <h6>Nose</h6>
-          <input type="text" name="" className="inputField" />
+          <input type="text" name="patientNoseInfectionType" className="inputField" />
         </div>
         <div>
           <h6>Throat</h6>
-          <input type="text" name="" className="inputField" />
+          <input type="text" name="patientNhroatInfectionType" className="inputField" />
         </div>
         <div>
           <h6>Lymph Node</h6>
-          <input type="text" name="" className="inputField" />
+          <input type="text" name="patientLymphNodeInfectionType" className="inputField" />
         </div>
         <div>
           <h6>Lungs</h6>
-          <input type="text" name="" className="inputField" />
+          <input type="text" name="patientLungsInfectionType" className="inputField" />
         </div>
         <div>
           <h6>Abdomen</h6>
-          <input type="text" name="" className="inputField" />
+          <input type="text" name="patientAbdomenInfectionType" className="inputField" />
         </div>
         <div></div>
         <div></div>
         <div>
           <h6>Heart Sounds</h6>
-          <input type="text" name="" className="inputField" />
+          <input type="text" name="patientHeartSoundType" className="inputField" />
         </div>
 
         <div>
@@ -81,13 +82,13 @@ const OnExamination = () => {
             <div className={styles.subGrid}>
               <span>Pulse</span>
               <label className="inputField">
-                <input type="text" />
+                <input type="text" name="patientPulse" />
                 <span>per M.</span>
               </label>
             </div>
             <div className={styles.subGrid}>
               <span>Rhythm</span>
-              <input type="text" className="inputField" />
+              <input type="text" name="patientHeartRhythmType" className="inputField" />
             </div>
           </div>
         </div>
@@ -98,18 +99,18 @@ const OnExamination = () => {
             <div className={styles.bpGridWrapper}>
               <span>1.</span>
               <div className={styles.bpGrid}>
-                <input type="text" name="" className="inputField" />
+                <input type="text" name="patientFirstBloodPressure" className="inputField" />
                 <hr />
-                <input type="text" name="" className="inputField" />
+                <input type="text" name="patientFirstBloodPressure" className="inputField" />
               </div>
             </div>
 
             <div className={styles.bpGridWrapper}>
               <span>2.</span>
               <div className={styles.bpGrid}>
-                <input type="text" name="" className="inputField" />
+                <input type="text" name="patientSecondBloodPressure" className="inputField" />
                 <hr />
-                <input type="text" name="" className="inputField" />
+                <input type="text" name="patientSecondBloodPressure" className="inputField" />
               </div>
             </div>
           </div>
@@ -121,16 +122,16 @@ const OnExamination = () => {
             <div className={styles.visionGridWrapper}>
               <span>Left</span>
               <div className={styles.equalGrid}>
-                <input type="text" name="" className="inputField" />
-                <input type="text" name="" className="inputField" />
+                <input type="text" name="patientLeftViision" className="inputField" />
+                <input type="text" name="patientLeftViision" className="inputField" />
               </div>
             </div>
 
             <div className={styles.visionGridWrapper}>
               <span>Right</span>
               <div className={styles.equalGrid}>
-                <input type="text" name="" className="inputField" />
-                <input type="text" name="" className="inputField" />
+                <input type="text" name="patientRightVision" className="inputField" />
+                <input type="text" name="patientRightVision" className="inputField" />
               </div>
             </div>
           </div>

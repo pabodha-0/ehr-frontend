@@ -6,7 +6,7 @@ const PriceSubmt = () => {
     <div className={`boxWrapper ${styles.main}`}>
       <div className={styles.totalWrapper}>
         <span>Total</span>
-        <input type="text" className="inputField" />
+        <input type="text" name="price" className="inputField" />
       </div>
       <div className={styles.btns}>
         <button type="reset" id={styles.resetBtn}>

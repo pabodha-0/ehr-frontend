@@ -17,48 +17,48 @@ const ExpandingList = () => {
     <div className={styles.main}>
       <div className={showMedicalHistory ? "" : styles.hide}>
         <div className={styles.transition}>
-          <MedicalHistory />
+          <MedicalHistory showMedicalHistory={showMedicalHistory} setShowMedicalHistory={setShowMedicalHistory} />
         </div>
       </div>
 
       <div className={showAllergies ? "" : styles.hide}>
         <div className={styles.transition}>
-          <Allergies />
+          <Allergies showAllergies={showAllergies} setShowAllergies={setShowAllergies} />
         </div>
       </div>
 
       <div className={showFamilyHistory ? "" : styles.hide}>
         <div className={styles.transition}>
-          <FamilyHistory />
+          <FamilyHistory showFamilyHistory={showFamilyHistory} setShowFamilyHistory={setShowFamilyHistory} />
         </div>
       </div>
 
       <div className={showInvestigations ? "" : styles.hide}>
         <div className={styles.transition}>
-          <Investigations />
+          <Investigations showInvestigations={showInvestigations} setShowInvestigations={setShowInvestigations} />
         </div>
       </div>
       <div className={styles.grid}>
         <h5
-          className="boxWrapper"
+          className={`boxWrapper ${!showMedicalHistory ? "" : styles.hide}`}
           onClick={() => setShowMedicalHistory(!showMedicalHistory)}
         >
           Medical History
         </h5>
         <h5
-          className="boxWrapper"
+          className={`boxWrapper ${!showAllergies ? "" : styles.hide}`}
           onClick={() => setShowAllergies(!showAllergies)}
         >
           Allergies
         </h5>
         <h5
-          className="boxWrapper"
+          className={`boxWrapper ${!showFamilyHistory ? "" : styles.hide}`}
           onClick={() => setShowFamilyHistory(!showFamilyHistory)}
         >
           Family History
         </h5>
         <h5
-          className="boxWrapper"
+          className={`boxWrapper ${!showInvestigations ? "" : styles.hide}`}
           onClick={() => setShowInvestigations(!showInvestigations)}
         >
           Investigations

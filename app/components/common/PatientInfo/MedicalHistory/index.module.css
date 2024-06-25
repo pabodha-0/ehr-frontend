@@ -10,6 +10,22 @@
   gap: var(--global-gap);
 }
 
+.headerBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.headerBox > .icon {
+  font-size: 14px;
+  transition: var(--global-transition);
+}
+
+.headerBox > .iconReverse {
+  transform: rotateX(180deg);
+}
+
 .checkboxWrapper {
   display: flex;
   align-items: center;

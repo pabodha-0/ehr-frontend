@@ -1,8 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* gap: var(--global-gap); */
-  margin-top: var(--global-gap);
+  gap: var(--global-gap);
 }
 
 .grid > h5 {
@@ -10,20 +9,25 @@
   cursor: pointer;
 }
 
-.grid > h5:hover {
+.grid > h5:hover,
+.grid > .hide {
   background-color: var(--primary-font-color);
   color: var(--primary-bg-color);
 }
 
 .main {
   display: grid;
-  gap: var(--global-gap);
 }
 
 .main > div {
   display: grid;
   grid-template-rows: 1fr;
   transition: 0.5s ease;
+  margin-bottom: var(--global-gap);
+}
+
+.main > div:last-child {
+  margin-bottom: 0;
 }
 
 .transition {
@@ -32,4 +36,5 @@
 
 .main > .hide {
   grid-template-rows: 0fr;
+  margin-bottom: 0;
 }

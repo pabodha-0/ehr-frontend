@@ -16,7 +16,7 @@ const BasicInfo = () => {
             className="inputField"
             type="text"
             inputMode="numeric"
-            name="patientID"
+            name="patientId"
             disabled
           />
         </label>
@@ -32,7 +32,7 @@ const BasicInfo = () => {
             <input
               className={`inputField ${styles.dateInput}`}
               type="date"
-              name="dob"
+              name="patientDOB"
             />
           </label>
 
@@ -42,24 +42,24 @@ const BasicInfo = () => {
               className="inputField"
               type="text"
               inputMode="numeric"
-              name="age"
+              name="patientAge"
             />
           </label>
         </div>
 
         <label className={styles.inputLabel}>
           <h6>Occupation</h6>
-          <input className="inputField" type="text" name="occupation" />
+          <input className="inputField" type="text" name="patientOccupation" />
         </label>
 
         <label className={styles.inputLabel}>
           <h6>Phone Number</h6>
-          <input className="inputField" type="tel" name="phoneNum" />
+          <input className="inputField" type="tel" name="patientPhoneNum" />
         </label>
 
         <label className={styles.inputLabel}>
           <h6>Address</h6>
-          <input className="inputField" type="text" name="address" />
+          <input className="inputField" type="text" name="patientAddress" />
         </label>
 
         <div className={styles.inputLabel}>
@@ -69,7 +69,7 @@ const BasicInfo = () => {
               <input
                 className={styles.genderInput}
                 type="radio"
-                name="gender"
+                name="patientGender"
                 value="male"
               />
 
@@ -82,7 +82,7 @@ const BasicInfo = () => {
               <input
                 className={styles.genderInput}
                 type="radio"
-                name="gender"
+                name="patientGender"
                 value="female"
               />
               <div className={styles.genderCard} id={styles.female}>
@@ -98,19 +98,20 @@ const BasicInfo = () => {
             <div className={styles.inputLabel}>
               <h6>Height</h6>
               <label className="inputField">
-                <input type="text" inputMode="numeric" name="height" />
+                <input type="text" inputMode="numeric" name="patientHeight" />
                 <span>cm</span>
               </label>
             </div>
             <div className={styles.inputLabel}>
               <h6>Weight</h6>
               <label className="inputField">
-                <input type="text" inputMode="numeric" name="weight" />
+                <input type="text" inputMode="numeric" name="patientWeight" />
                 <span>kg</span>
               </label>
             </div>
           </div>
           <div className={styles.bmiDisplay}>
+            {/*add input named patientBMI*/}
             <span>BMI - </span>
             <span>56</span>
           </div>

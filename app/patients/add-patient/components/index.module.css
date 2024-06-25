@@ -8,3 +8,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: var(--global-gap);
 }
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--global-gap);
+}

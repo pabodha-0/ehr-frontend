@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Layout from "./components/Layout";
+import {ReduxProvider} from "@/app/redux/provider";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <Layout>{children}</Layout>
+        <ReduxProvider>
+            <Layout>{children}</Layout>
+        </ReduxProvider>
       </body>
     </html>
   );

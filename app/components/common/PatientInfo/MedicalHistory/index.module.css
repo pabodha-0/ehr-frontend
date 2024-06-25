@@ -1,0 +1,42 @@
+.historyWrapper,
+.main {
+  display: grid;
+  gap: var(--global-gap);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--global-gap);
+}
+
+.headerBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.headerBox > .icon {
+  font-size: 14px;
+  transition: var(--global-transition);
+}
+
+.headerBox > .iconReverse {
+  transform: rotateX(180deg);
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary-font-color);
+}
+
+.checkboxWrapper hr {
+  width: 100%;
+  height: 1px;
+  color: var(--secondary-bg-color);
+}

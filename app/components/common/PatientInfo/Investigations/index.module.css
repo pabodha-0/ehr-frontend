@@ -1,0 +1,36 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--global-gap);
+}
+
+.gridWrapper {
+  margin-top: var(--global-gap);
+  display: grid;
+  gap: 10px;
+}
+
+.gridWrapper > h6 {
+  color: var(--primary-font-color);
+}
+
+.subGridWrapper {
+  display: grid;
+  gap: 4px;
+}
+
+.headerBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.headerBox > .icon {
+  font-size: 14px;
+  transition: var(--global-transition);
+}
+
+.headerBox > .iconReverse {
+  transform: rotateX(180deg);
+}

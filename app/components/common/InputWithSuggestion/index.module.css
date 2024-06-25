@@ -1,0 +1,38 @@
+.main {
+  position: relative;
+  flex-grow: 1;
+}
+
+.suggestionList {
+  position: absolute;
+  background-color: var(--primary-bg-color);
+  border: 2px solid black;
+  top: 24px;
+  left: 0;
+  border-radius: var(--global-radius);
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+  color: var(--secondary-font-color);
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: scroll;
+  max-height: 100px;
+}
+
+.suggestionList li {
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.suggestionList li:hover {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.input:focus + .suggestionList {
+  visibility: visible;
+  opacity: 1;
+}

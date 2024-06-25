@@ -1,0 +1,46 @@
+.drugsGridWrapper {
+  display: grid;
+  gap: 10px;
+  margin-top: var(--global-gap);
+}
+
+.internalDrugsGrid {
+  display: grid;
+  grid-template-columns:
+    6fr var(--global-gap) 3fr var(--global-gap) 3fr var(--global-gap)
+    2fr var(--global-gap) 2fr 2fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.externalDrugsGrid {
+  display: grid;
+  grid-template-columns:
+    6fr var(--global-gap) 3fr var(--global-gap) 3fr var(--global-gap)
+    2fr var(--global-gap) 2fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.internalDrugsGrid hr,
+.externalDrugsGrid hr {
+  width: 100%;
+  height: 1px;
+  color: antiquewhite;
+}
+
+.addNew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0;
+  border-radius: var(--global-radius);
+  background-color: var(--secondary-bg-color);
+  transition: var(--global-transition);
+  cursor: pointer;
+}
+
+.addNew:hover {
+  background-color: var(--primary-font-color);
+  color: var(--primary-bg-color);
+}

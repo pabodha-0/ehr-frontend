@@ -1,0 +1,51 @@
+.inputWrapper {
+  display: flex;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentWrapper {
+  display: grid;
+  gap: 4px;
+  margin-top: var(--global-gap);
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid hr {
+  flex-grow: 1;
+  height: 1px;
+  color: var(--secondary-bg-color);
+}
+
+.durationInput {
+  max-width: 100px;
+}
+
+.addNew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0;
+  border-radius: var(--global-radius);
+  background-color: var(--secondary-bg-color);
+  transition: var(--global-transition);
+  cursor: pointer;
+}
+
+.addNew:hover {
+  background-color: var(--primary-font-color);
+  color: var(--primary-bg-color);
+}

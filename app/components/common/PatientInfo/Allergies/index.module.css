@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--global-gap);
+  margin-top: 4px;
+}
+
+.subHeader {
+  margin-top: var(--global-gap);
+}
+
+.headerBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.headerBox > .icon {
+  font-size: 14px;
+  transition: var(--global-transition);
+}
+
+.headerBox > .iconReverse {
+  transform: rotateX(180deg);
+}
+
+.addNew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0;
+  height: 100%;
+  border-radius: var(--global-radius);
+  background-color: var(--secondary-bg-color);
+  transition: var(--global-transition);
+  cursor: pointer;
+}
+
+.addNew:hover {
+  background-color: var(--primary-font-color);
+  color: var(--primary-bg-color);
+}

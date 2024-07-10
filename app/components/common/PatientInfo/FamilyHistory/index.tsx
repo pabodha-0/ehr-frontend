@@ -9,39 +9,39 @@ const FamilyHistory = ({showFamilyHistory, setShowFamilyHistory}: {showFamilyHis
   const medicalHistoryChecks = [
     {
       name: "DM",
-      inputName: "dm",
+      inputName: "DM",
     },
     {
       name: "Epilepsy",
-      inputName: "epilepsy",
+      inputName: "Epilepsy",
     },
     {
       name: "HT",
-      inputName: "ht",
+      inputName: "HT",
     },
     {
       name: "Cancer",
-      inputName: "cancer",
+      inputName: "Cancer",
     },
     {
       name: "IHD",
-      inputName: "ihd",
+      inputName: "IHD",
     },
     {
       name: "BA",
-      inputName: "ba",
+      inputName: "BA",
     },
     {
       name: "CVA",
-      inputName: "cva",
+      inputName: "CVA",
     },
     {
       name: "Alcoholic",
-      inputName: "alcoholic",
+      inputName: "Alcoholic",
     },
     {
       name: "Smoking",
-      inputName: "smoking",
+      inputName: "Smoking",
     },
   ];
 
@@ -63,11 +63,11 @@ const FamilyHistory = ({showFamilyHistory, setShowFamilyHistory}: {showFamilyHis
                 <div className={styles.subGrid}>
                   <div className={styles.inputWrapper}>
                     <h6>Name</h6>
-                    <input type="text" className="inputField" name={`${familyMember.toLowerCase()}-name`}/>
+                    <input type="text" className="inputField" name={`${familyMember.toLowerCase()}Name`}/>
                   </div>
                   <div className={styles.inputWrapper}>
                     <h6>Occupation</h6>
-                    <input type="text" className="inputField" name={`${familyMember.toLowerCase()}-occupation`}/>
+                    <input type="text" className="inputField" name={`${familyMember.toLowerCase()}Occupation`}/>
                   </div>
                 </div>
                 <div className={styles.subGrid}>
@@ -78,7 +78,8 @@ const FamilyHistory = ({showFamilyHistory, setShowFamilyHistory}: {showFamilyHis
                         <input
                             type="checkbox"
                             className="ui-checkbox"
-                            name={`${familyMember.toLowerCase()}-${inputName}`}
+                            name={`${familyMember.toLowerCase()}${inputName}`}
+                            value="true"
                         />
                       </div>
                   ))}

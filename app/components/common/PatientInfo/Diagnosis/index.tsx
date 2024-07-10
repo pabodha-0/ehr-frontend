@@ -16,7 +16,7 @@ const Diagnosis = () => {
         {Array.from(Array(diagnosisAmount)).map((_, i) => (
           <div key={i}>
             <InputWithSuggestion
-              inputName="diagnosis"
+              inputName="patientDiagnoses"
               suggestionList={diagnosisSuggestions}
             />
           </div>

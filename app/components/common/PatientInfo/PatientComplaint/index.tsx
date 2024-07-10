@@ -37,7 +37,7 @@ const PatientComplaint = () => {
               />
               <hr />
               <label className={`inputField ${styles.durationInput}`}>
-                <input type="text" />
+                <input type="text" name="patientSymptomDurations" />
                 <span>days</span>
               </label>
             </div>

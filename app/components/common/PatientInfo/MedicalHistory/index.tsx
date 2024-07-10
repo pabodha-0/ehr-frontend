@@ -64,7 +64,7 @@ const MedicalHistory = ({showMedicalHistory, setShowMedicalHistory}: {showMedica
                         <div className={styles.checkboxWrapper} key={i}>
                             <span>{name}</span>
                             <hr/>
-                            <input type="checkbox" className="ui-checkbox" name={`patient${inputName}`}/>
+                            <input type="checkbox" className="ui-checkbox" name={`patient${inputName}`} value="true" />
                         </div>
                     ))}
                 </div>
@@ -77,7 +77,7 @@ const MedicalHistory = ({showMedicalHistory, setShowMedicalHistory}: {showMedica
                         <div className={styles.checkboxWrapper} key={i}>
                             <span>{name}</span>
                             <hr/>
-                            <input type="checkbox" className="ui-checkbox" name={`patient${inputName}`}/>
+                            <input type="checkbox" className="ui-checkbox" name={`patient${inputName}`} value="true" />
                         </div>
                     ))}
                 </div>
@@ -90,7 +90,7 @@ const MedicalHistory = ({showMedicalHistory, setShowMedicalHistory}: {showMedica
                         <div className={styles.checkboxWrapper} key={i}>
                             <span>{name}</span>
                             <hr/>
-                            <input type="checkbox" className="ui-checkbox" name={`patient${inputName}`}/>
+                            <input type="checkbox" className="ui-checkbox" name={`patient${inputName}`} value="true" />
                         </div>
                     ))}
                 </div>

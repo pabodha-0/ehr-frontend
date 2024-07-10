@@ -14,62 +14,63 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mm<sup>3</sup>"
         },
         {
           name: "N",
           inputName: "N",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "%"
         },
         {
           name: "L",
           inputName: "L",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "%"
         },
         {
           name: "E",
           inputName: "E",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "%"
         },
         {
           name: "M",
           inputName: "M",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "%"
         },
         {
           name: "B",
           inputName: "B",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "%"
         },
         {
           name: "Hemoglobin",
           inputName: "Hemoglobin",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "g/dl"
         },
         {
           name: "PCV",
           inputName: "PCV",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "%"
         },
         {
           name: "Platelets",
           inputName: "Platelets",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "x10<sup>3</sup>/ul"
         },
       ],
     },
@@ -79,44 +80,44 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
         {
           name: "Gamma GT",
           inputName: "GammaGT",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "1u/l"
         },
         {
           name: "SGOT (AST)",
           inputName: "SGOTAST",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "1u/l"
         },
         {
           name: "SGPT (ALT)",
           inputName: "SGPTALT",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "1u/l"
         },
         {
           name: "Total Bilirubin",
           inputName: "TotalBilirubin",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "umol/l"
         },
         {
           name: "Direct Bilirubin",
           inputName: "DirectBilirubin",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "umol/l"
         },
         {
           name: "Indirect Bilirubin",
           inputName: "IndirectBilirubin",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "umol/l"
         },
       ],
     },
@@ -126,37 +127,37 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
         {
           name: "Total Cholesterol",
           inputName: "TotalCholesterol",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg"
         },
         {
           name: "S. TG",
           inputName: "STG",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg"
         },
         {
           name: "HDL",
           inputName: "HDL",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg"
         },
         {
           name: "LDL",
           inputName: "LDL",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg"
         },
         {
           name: "CHO/ HDL",
           inputName: "CHOHDL",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: ""
         },
       ],
     },
@@ -166,37 +167,37 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
         {
           name: "Albumin",
           inputName: "Albumin",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: ""
         },
         {
           name: "Sugar",
           inputName: "Sugar",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: ""
         },
         {
           name: "Pus Cells",
           inputName: "PusCells",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: ""
         },
         {
           name: "Red Cells",
           inputName: "RedCells",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: ""
         },
         {
           name: "Urine Culture",
           inputName: "UrineCulture",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: ""
         },
       ],
     },
@@ -206,37 +207,40 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
         {
           name: "Serum Creatinine",
           inputName: "SerumCreatinine",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "umol/l"
         },
         {
           name: "Blood Urea",
           inputName: "BloodUrea",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg/dl"
         },
         {
-          name: "Serum Electrolytes - Na",
+          name: "Serum Electrolytes - Na<sup>+</sup>",
           inputName: "SerumElectrolytesNA",
           substring: "+",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mmol/l"
         },
         {
-          name: "Serum Electrolytes - K",
+          name: "Serum Electrolytes - K<sup>+</sup>",
           inputName: "SerumElectrolytesK",
           substring: "+",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mmol/l"
         },
         {
-          name: "Serum Electrolytes - Cl",
+          name: "Serum Electrolytes - Cl<sup>-</sup>",
           inputName: "SerumElectrolytesCL",
           substring: "-",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mmol/l"
         },
       ],
     },
@@ -246,30 +250,30 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
         {
           name: "FBS",
           inputName: "FBS",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg/dl"
         },
         {
           name: "PPBS",
           inputName: "PPBS",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg/dl"
         },
         {
           name: "RBS",
           inputName: "RBS",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg/dl"
         },
         {
           name: "HBA1C",
           inputName: "HBA1C",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "%"
         },
       ],
     },
@@ -279,23 +283,23 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
         {
           name: "TSH",
           inputName: "TSH",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "uiu/ml"
         },
         {
           name: "T3",
           inputName: "T3",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "uiu/ml"
         },
         {
           name: "T4",
           inputName: "T4",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "uiu/ml"
         },
       ],
     },
@@ -305,24 +309,23 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
         {
           name: "ESR",
           inputName: "ESR",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mm"
         },
         {
           name: "CRP",
           inputName: "CRP",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
+          metric: "mg/l"
         },
         {
           name: "ECG",
           inputName: "ECG",
-          substring: "",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "k",
+          metric: "",
         },
       ],
     },
@@ -343,12 +346,10 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
                   if (field.suggestions.length == 0) {
                     return (
                         <div key={i} className={styles.subGridWrapper}>
-                          <h6>
-                            {field.name} <sup>{field.substring}</sup>
-                          </h6>
+                          <h6 dangerouslySetInnerHTML={field.name ? {__html: field.name} : {__html: ""}}></h6>
                           <label className="inputField">
                             <input type="text" name={`patient${field.inputName}`}/>
-                            <span>{field.metric}</span>
+                            <span dangerouslySetInnerHTML={field.metric ? {__html: field.metric} : {__html: ""}}></span>
                           </label>
                         </div>
                     );

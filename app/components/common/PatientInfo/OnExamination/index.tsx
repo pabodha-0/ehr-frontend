@@ -14,11 +14,11 @@ const OnExamination = () => {
           <h6>Pale</h6>
           <div className={styles.booleanWrapper}>
             <label>
-              <input type="radio" name="patientIsPale" />
+              <input type="radio" name="patientIsPale" value="true" />
               <div className={styles.booleanBtn}>Yes</div>
             </label>
             <label>
-              <input type="radio" name="patientIsPale" />
+              <input type="radio" name="patientIsPale" value="false" />
               <div className={styles.booleanBtn}>No</div>
             </label>
           </div>
@@ -55,7 +55,7 @@ const OnExamination = () => {
         </div>
         <div>
           <h6>Throat</h6>
-          <input type="text" name="patientNhroatInfectionType" className="inputField" />
+          <input type="text" name="patientThroatInfectionType" className="inputField" />
         </div>
         <div>
           <h6>Lymph Node</h6>
@@ -122,8 +122,8 @@ const OnExamination = () => {
             <div className={styles.visionGridWrapper}>
               <span>Left</span>
               <div className={styles.equalGrid}>
-                <input type="text" name="patientLeftViision" className="inputField" />
-                <input type="text" name="patientLeftViision" className="inputField" />
+                <input type="text" name="patientLeftVision" className="inputField" />
+                <input type="text" name="patientLeftVision" className="inputField" />
               </div>
             </div>
 

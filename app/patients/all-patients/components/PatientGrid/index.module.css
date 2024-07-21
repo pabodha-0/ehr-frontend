@@ -1,0 +1,69 @@
+.main {
+  display: grid;
+  /* gap: var(--global-gap); */
+  padding: var(--global-gap) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 8rem 8rem 10rem;
+  margin-bottom: 6px;
+  padding: 0 0.8rem;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--secondary-font-color);
+}
+
+.patientCard {
+  background-color: var(--primary-bg-color);
+  border-radius: var(--global-radius);
+  color: var(--primary-font-color);
+  font-size: 16px;
+  padding: 0.8rem;
+  margin-bottom: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--global-transition);
+}
+
+.patientCard:hover {
+  background-color: var(--primary-font-color);
+  color: var(--primary-bg-color);
+}
+
+.patientProfile {
+  display: flex;
+  align-items: center;
+  gap: var(--global-gap);
+}
+
+.patientProfile img {
+  border-radius: 100%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination > div {
+  background-color: var(--primary-bg-color);
+  width: 3ch;
+  height: 3ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--global-transition);
+}
+
+.pagination > div:hover {
+  background-color: var(--primary-font-color);
+  color: var(--primary-bg-color);
+}

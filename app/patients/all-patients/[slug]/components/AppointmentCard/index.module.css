@@ -1,0 +1,60 @@
+.subGrid {
+  display: grid;
+  grid-template-columns: auto 10rem 8rem;
+  margin-bottom: 6px;
+  padding: var(--global-gap);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: var(--global-radius);
+  color: var(--primary-font-color);
+  background-color: var(--primary-bg-color);
+  cursor: pointer;
+}
+
+.main > div {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: 0.5s ease;
+  margin-bottom: var(--global-gap);
+}
+
+.main > .hide {
+  grid-template-rows: 0fr;
+  margin-bottom: 0;
+}
+
+.hide > .transition {
+  overflow: hidden;
+}
+
+.unhide > .transition {
+  animation: 1.4s delay-overflow;
+}
+
+@keyframes delay-overflow {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
+}
+
+.icon {
+  justify-self: flex-end;
+  transition: var(--global-transition);
+}
+
+.iconReverse {
+  transform: rotateX(180deg);
+}
+.transition {
+  display: grid;
+  gap: var(--global-gap);
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--global-gap);
+}

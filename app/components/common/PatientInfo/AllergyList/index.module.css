@@ -1,0 +1,24 @@
+.main {
+  display: grid;
+  gap: var(--global-gap);
+  align-content: flex-start;
+}
+
+.allergyWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--global-gap);
+}
+
+.allergies {
+  display: grid;
+  gap: 6px;
+}
+
+.allergies > div {
+  background-color: var(--warning-color);
+  border-radius: var(--global-radius);
+  color: var(--primary-bg-color);
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+}

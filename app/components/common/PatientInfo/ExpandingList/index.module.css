@@ -30,11 +30,24 @@
   margin-bottom: 0;
 }
 
-.transition {
-  overflow: hidden;
-}
-
 .main > .hide {
   grid-template-rows: 0fr;
   margin-bottom: 0;
+}
+
+.hide > .transition {
+  overflow: hidden;
+}
+
+.unhide > .transition {
+  animation: 1.4s delay-overflow;
+}
+
+@keyframes delay-overflow {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
 }

@@ -1,23 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { InputWithSuggestion } from "../../InputWithSuggestion";
 import { FaPlus } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/app/redux/store";
+import { getAllSymptoms } from "@/app/redux/features/symptom";
 
 const PatientComplaint = () => {
-  const complaintsSuggestionList = [
-    "Edge",
-    "Firefox",
-    "Chrome",
-    "Safari",
-    "Firefox",
-    "Chrome",
-    "Safari",
-    "Firefox",
-    "Chrome",
-    "Safari",
-  ];
+  const dispatch = useDispatch<AppDispatch>();
+
+  const complaintsSuggestionList = useSelector(
+    (state: RootState) => state.symptom.allSymptoms?.data
+  );
+
+  useEffect(() => {
+    dispatch(getAllSymptoms());
+  }, [dispatch]);
 
   const [complaintsAmount, setComplaintsAmount] = useState(5);
   return (

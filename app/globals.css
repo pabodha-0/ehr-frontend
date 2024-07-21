@@ -75,9 +75,18 @@ h6 {
   min-width: max-content;
 }
 
-.inputField:disabled {
+.inputField:disabled,
+.inputDisabled,
+.inputDisabled > input {
   background-color: var(--secondary-bg-color);
   border: none;
+  outline: none;
+}
+
+.inputDisabled:hover,
+.inputDisabled:focus {
+  border: none;
+  outline: none;
 }
 
 .boxWrapper {
@@ -131,12 +140,14 @@ h6 {
   border-color: #1677ff;
 }
 
-.ui-checkbox:checked {
+.ui-checkbox:checked,
+.ui-checkbox:default {
   background: #1677ff;
   border-color: transparent;
 }
 
-.ui-checkbox:checked::before {
+.ui-checkbox:checked::before,
+.ui-checkbox:default::before {
   opacity: 1;
   transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
   transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
@@ -146,4 +157,18 @@ h6 {
   box-shadow: none;
   transition: none;
   opacity: 1;
+}
+
+/* scrollbar */
+.custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--secondary-font-color);
 }

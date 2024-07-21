@@ -1,9 +1,30 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import styles from "./index.module.css";
 import { InputWithSuggestion } from "../../InputWithSuggestion";
-import {FaChevronUp} from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/app/redux/store";
+import { getAllECGTypes } from "@/app/redux/features/ecgType";
 
-const Investigations = ({showInvestigations, setShowInvestigations}: {showInvestigations: boolean, setShowInvestigations: Function}) => {
+const Investigations = ({
+  showInvestigations,
+  setShowInvestigations,
+}: {
+  showInvestigations: boolean;
+  setShowInvestigations: Function;
+}) => {
+  const dispatch = useDispatch<AppDispatch>();
+
+  const ecgTypeSuggestionList = useSelector(
+    (state: RootState) => state.ecgType.allECGTypes?.data
+  );
+
+  useEffect(() => {
+    dispatch(getAllECGTypes());
+  }, [dispatch]);
+
   const investigationTypes = [
     {
       name: "Full Blood Count",
@@ -14,63 +35,63 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           substring: "",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mm<sup>3</sup>"
+          metric: "mm<sup>3</sup>",
         },
         {
           name: "N",
           inputName: "N",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "%"
+          metric: "%",
         },
         {
           name: "L",
           inputName: "L",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "%"
+          metric: "%",
         },
         {
           name: "E",
           inputName: "E",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "%"
+          metric: "%",
         },
         {
           name: "M",
           inputName: "M",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "%"
+          metric: "%",
         },
         {
           name: "B",
           inputName: "B",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "%"
+          metric: "%",
         },
         {
           name: "Hemoglobin",
           inputName: "Hemoglobin",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "g/dl"
+          metric: "g/dl",
         },
         {
           name: "PCV",
           inputName: "PCV",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "%"
+          metric: "%",
         },
         {
           name: "Platelets",
           inputName: "Platelets",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "x10<sup>3</sup>/ul"
+          metric: "x10<sup>3</sup>/ul",
         },
       ],
     },
@@ -82,42 +103,42 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           inputName: "GammaGT",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "1u/l"
+          metric: "1u/l",
         },
         {
           name: "SGOT (AST)",
           inputName: "SGOTAST",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "1u/l"
+          metric: "1u/l",
         },
         {
           name: "SGPT (ALT)",
           inputName: "SGPTALT",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "1u/l"
+          metric: "1u/l",
         },
         {
           name: "Total Bilirubin",
           inputName: "TotalBilirubin",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "umol/l"
+          metric: "umol/l",
         },
         {
           name: "Direct Bilirubin",
           inputName: "DirectBilirubin",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "umol/l"
+          metric: "umol/l",
         },
         {
           name: "Indirect Bilirubin",
           inputName: "IndirectBilirubin",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "umol/l"
+          metric: "umol/l",
         },
       ],
     },
@@ -129,35 +150,35 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           inputName: "TotalCholesterol",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg"
+          metric: "mg",
         },
         {
           name: "S. TG",
           inputName: "STG",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg"
+          metric: "mg",
         },
         {
           name: "HDL",
           inputName: "HDL",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg"
+          metric: "mg",
         },
         {
           name: "LDL",
           inputName: "LDL",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg"
+          metric: "mg",
         },
         {
           name: "CHO/ HDL",
           inputName: "CHOHDL",
           suggestions: [],
           defaultValue: "Normal",
-          metric: ""
+          metric: "",
         },
       ],
     },
@@ -169,35 +190,35 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           inputName: "Albumin",
           suggestions: [],
           defaultValue: "Normal",
-          metric: ""
+          metric: "",
         },
         {
           name: "Sugar",
           inputName: "Sugar",
           suggestions: [],
           defaultValue: "Normal",
-          metric: ""
+          metric: "",
         },
         {
           name: "Pus Cells",
           inputName: "PusCells",
           suggestions: [],
           defaultValue: "Normal",
-          metric: ""
+          metric: "",
         },
         {
           name: "Red Cells",
           inputName: "RedCells",
           suggestions: [],
           defaultValue: "Normal",
-          metric: ""
+          metric: "",
         },
         {
           name: "Urine Culture",
           inputName: "UrineCulture",
           suggestions: [],
           defaultValue: "Normal",
-          metric: ""
+          metric: "",
         },
       ],
     },
@@ -209,14 +230,14 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           inputName: "SerumCreatinine",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "umol/l"
+          metric: "umol/l",
         },
         {
           name: "Blood Urea",
           inputName: "BloodUrea",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg/dl"
+          metric: "mg/dl",
         },
         {
           name: "Serum Electrolytes - Na<sup>+</sup>",
@@ -224,7 +245,7 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           substring: "+",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mmol/l"
+          metric: "mmol/l",
         },
         {
           name: "Serum Electrolytes - K<sup>+</sup>",
@@ -232,7 +253,7 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           substring: "+",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mmol/l"
+          metric: "mmol/l",
         },
         {
           name: "Serum Electrolytes - Cl<sup>-</sup>",
@@ -240,7 +261,7 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           substring: "-",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mmol/l"
+          metric: "mmol/l",
         },
       ],
     },
@@ -252,28 +273,28 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           inputName: "FBS",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg/dl"
+          metric: "mg/dl",
         },
         {
           name: "PPBS",
           inputName: "PPBS",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg/dl"
+          metric: "mg/dl",
         },
         {
           name: "RBS",
           inputName: "RBS",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg/dl"
+          metric: "mg/dl",
         },
         {
           name: "HBA1C",
           inputName: "HBA1C",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "%"
+          metric: "%",
         },
       ],
     },
@@ -285,21 +306,21 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           inputName: "TSH",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "uiu/ml"
+          metric: "uiu/ml",
         },
         {
           name: "T3",
           inputName: "T3",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "uiu/ml"
+          metric: "uiu/ml",
         },
         {
           name: "T4",
           inputName: "T4",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "uiu/ml"
+          metric: "uiu/ml",
         },
       ],
     },
@@ -311,19 +332,19 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
           inputName: "ESR",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mm"
+          metric: "mm",
         },
         {
           name: "CRP",
           inputName: "CRP",
           suggestions: [],
           defaultValue: "Normal",
-          metric: "mg/l"
+          metric: "mg/l",
         },
         {
           name: "ECG",
           inputName: "ECG",
-          suggestions: [],
+          suggestions: ecgTypeSuggestionList,
           defaultValue: "Normal",
           metric: "",
         },
@@ -332,43 +353,60 @@ const Investigations = ({showInvestigations, setShowInvestigations}: {showInvest
   ];
 
   return (
-      <div className="boxWrapper">
-        <div className={styles.headerBox} onClick={() => setShowInvestigations(false)}>
-          <h5>Investigations</h5>
-          <FaChevronUp className={`${styles.icon} ${showInvestigations ? "" : styles.iconReverse}`}/>
-        </div>
-
-        {investigationTypes.map((investigationType, i) => (
-            <div key={i} className={styles.gridWrapper}>
-              <h6>{investigationType.name}</h6>
-              <div className={styles.grid}>
-                {investigationType.fields.map((field, i) => {
-                  if (field.suggestions.length == 0) {
-                    return (
-                        <div key={i} className={styles.subGridWrapper}>
-                          <h6 dangerouslySetInnerHTML={field.name ? {__html: field.name} : {__html: ""}}></h6>
-                          <label className="inputField">
-                            <input type="text" name={`patient${field.inputName}`}/>
-                            <span dangerouslySetInnerHTML={field.metric ? {__html: field.metric} : {__html: ""}}></span>
-                          </label>
-                        </div>
-                    );
-                  } else {
-                    return (
-                        <div key={i}>
-                          <h6>{field.name}</h6>
-                          <InputWithSuggestion
-                              inputName={field.inputName}
-                              suggestionList={field.suggestions}
-                          />
-                        </div>
-                    );
-                  }
-                })}
-              </div>
-            </div>
-        ))}
+    <div className="boxWrapper">
+      <div
+        className={styles.headerBox}
+        onClick={() => setShowInvestigations(false)}
+      >
+        <h5>Investigations</h5>
+        <FaChevronUp
+          className={`${styles.icon} ${
+            showInvestigations ? "" : styles.iconReverse
+          }`}
+        />
       </div>
+
+      {investigationTypes.map((investigationType, i) => (
+        <div key={i} className={styles.gridWrapper}>
+          <h6>{investigationType.name}</h6>
+          <div className={styles.grid}>
+            {investigationType.fields.map((field, i) => {
+              if (field.suggestions?.length == 0) {
+                return (
+                  <div key={i} className={styles.subGridWrapper}>
+                    <h6
+                      dangerouslySetInnerHTML={
+                        field.name ? { __html: field.name } : { __html: "" }
+                      }
+                    ></h6>
+                    <label className="inputField">
+                      <input type="text" name={`patient${field.inputName}`} />
+                      <span
+                        dangerouslySetInnerHTML={
+                          field.metric
+                            ? { __html: field.metric }
+                            : { __html: "" }
+                        }
+                      ></span>
+                    </label>
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={i}>
+                    <h6>{field.name}</h6>
+                    <InputWithSuggestion
+                      inputName={field.inputName}
+                      suggestionList={field.suggestions}
+                    />
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 

@@ -1,8 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { PiGenderFemaleBold, PiGenderMaleBold } from "react-icons/pi";
+import { useSelector } from "react-redux";
+import { RootState } from "@/app/redux/store";
 
-const BasicInfo = () => {
+const BasicInfo = ({
+  existingUser,
+  allDisabled,
+}: {
+  existingUser?: boolean;
+  allDisabled?: boolean;
+}) => {
+  const [bmiValue, setBMIValue] = useState(1);
+  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState(0);
+
+  useEffect(() => {
+    if (height && weight) {
+      const bmi = weight / ((height / 100) ^ 2);
+      setBMIValue(Math.round(bmi * 100) / 100);
+    } else {
+      setBMIValue(0);
+    }
+  }, [height, weight]);
+
+  const patient = useSelector(
+    (state: RootState) => state.patient.activePatient?.data
+  );
+
   return (
     <div className="boxWrapper">
       <div>
@@ -13,6 +40,7 @@ const BasicInfo = () => {
         <label className={styles.inputLabel}>
           <h6>Patient ID</h6>
           <input
+            defaultValue={patient?.id}
             className="inputField"
             type="text"
             inputMode="numeric"
@@ -23,7 +51,13 @@ const BasicInfo = () => {
 
         <label className={styles.inputLabel}>
           <h6>Name</h6>
-          <input className="inputField" type="text" name="patientName" />
+          <input
+            defaultValue={patient?.name ? patient?.name : ""}
+            className="inputField"
+            type="text"
+            name="patientName"
+            disabled={allDisabled}
+          />
         </label>
 
         <div className={styles.equalGrid}>
@@ -33,63 +67,98 @@ const BasicInfo = () => {
               className={`inputField ${styles.dateInput}`}
               type="date"
               name="patientDOB"
+              disabled={allDisabled}
             />
           </label>
 
           <label className={styles.inputLabel}>
             <h6>Age</h6>
             <input
+              defaultValue={patient?.age}
               className="inputField"
               type="text"
               inputMode="numeric"
               name="patientAge"
+              disabled={allDisabled}
             />
           </label>
         </div>
 
         <label className={styles.inputLabel}>
           <h6>Occupation</h6>
-          <input className="inputField" type="text" name="patientOccupation" />
+          <input
+            defaultValue={patient?.occupation}
+            className="inputField"
+            type="text"
+            name="patientOccupation"
+            disabled={allDisabled}
+          />
         </label>
 
         <label className={styles.inputLabel}>
           <h6>Phone Number</h6>
-          <input className="inputField" type="tel" name="patientPhoneNum" />
+          <input
+            defaultValue={patient?.phone}
+            className="inputField"
+            type="tel"
+            name="patientPhoneNum"
+            disabled={allDisabled}
+          />
         </label>
 
         <label className={styles.inputLabel}>
           <h6>Address</h6>
-          <input className="inputField" type="text" name="patientAddress" />
+          <input
+            defaultValue={patient?.address}
+            className="inputField"
+            type="text"
+            name="patientAddress"
+            disabled={allDisabled}
+          />
         </label>
 
         <div className={styles.inputLabel}>
           <h6>Gender</h6>
           <div className={styles.genderCardWrapper}>
-            <label>
-              <input
-                className={styles.genderInput}
-                type="radio"
-                name="patientGender"
-                value="male"
-              />
+            {(patient?.gender == "Male" || !existingUser) && (
+              <label
+                className={
+                  patient?.gender == "Male" ? styles.genderSelected : ""
+                }
+              >
+                <input
+                  className={styles.genderInput}
+                  type="radio"
+                  name="patientGender"
+                  value="Male"
+                  disabled={allDisabled}
+                />
 
-              <div className={styles.genderCard} id={styles.male}>
-                <PiGenderMaleBold />
-                <span>Male</span>
-              </div>
-            </label>
-            <label>
-              <input
-                className={styles.genderInput}
-                type="radio"
-                name="patientGender"
-                value="female"
-              />
-              <div className={styles.genderCard} id={styles.female}>
-                <PiGenderFemaleBold />
-                <span>Female</span>
-              </div>
-            </label>
+                <div className={styles.genderCard} id={styles.male}>
+                  <PiGenderMaleBold />
+                  <span>Male</span>
+                </div>
+              </label>
+            )}
+            {(patient?.gender == "Female" || !existingUser) && (
+              <label
+                className={
+                  patient?.gender == "Female" ? styles.genderSelected : ""
+                }
+              >
+                <input
+                  className={styles.genderInput}
+                  type="radio"
+                  name="patientGender"
+                  value="Female"
+                  disabled={allDisabled}
+                />
+                <div className={styles.genderCard} id={styles.female}>
+                  <PiGenderFemaleBold />
+                  <span>Female</span>
+                </div>
+              </label>
+            )}
           </div>
         </div>
 
@@ -97,23 +166,45 @@ const BasicInfo = () => {
           <div className={styles.equalGrid}>
             <div className={styles.inputLabel}>
               <h6>Height</h6>
-              <label className="inputField">
-                <input type="text" inputMode="numeric" name="patientHeight" />
+              <label
+                className={`inputField ${allDisabled ? "inputDisabled" : ""}`}
+              >
+                <input
+                  defaultValue={patient?.height}
+                  type="text"
+                  inputMode="numeric"
+                  name="patientHeight"
+                  onChange={(e) => setHeight(parseInt(e.target.value))}
+                  disabled={allDisabled}
+                />
                 <span>cm</span>
               </label>
             </div>
             <div className={styles.inputLabel}>
               <h6>Weight</h6>
-              <label className="inputField">
-                <input type="text" inputMode="numeric" name="patientWeight" />
+              <label
+                className={`inputField ${allDisabled ? "inputDisabled" : ""}`}
+              >
+                <input
+                  defaultValue={patient?.weight}
+                  type="text"
+                  inputMode="numeric"
+                  name="patientWeight"
+                  onChange={(e) => setWeight(parseInt(e.target.value))}
+                  disabled={allDisabled}
+                />
                 <span>kg</span>
               </label>
             </div>
           </div>
           <div className={styles.bmiDisplay}>
-            {/*add input named patientBMI*/}
             <span>BMI - </span>
-            <span>56</span>
+            <input
+              name="patientBMI"
+              defaultValue={patient?.bmi ? patient?.bmi : bmiValue}
+              // onChange={(e) => setBMIValue(parseInt(e.target.value))}
+              disabled
+            />
           </div>
         </div>
       </div>

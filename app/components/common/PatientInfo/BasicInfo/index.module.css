@@ -49,12 +49,14 @@
   font-size: 14px;
 }
 
-.genderInput:checked + #male {
+.genderInput:checked + #male,
+.genderSelected > #male {
   background-color: var(--success-color);
   color: #ffffff;
 }
 
-.genderInput:checked + #female {
+.genderInput:checked + #female,
+.genderSelected > #female {
   background-color: #ff007f;
   color: #ffffff;
 }
@@ -71,4 +73,13 @@
   padding: 0.4rem 0.6rem;
   font-weight: 500;
   width: 100%;
+}
+
+.bmiDisplay > input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
 }

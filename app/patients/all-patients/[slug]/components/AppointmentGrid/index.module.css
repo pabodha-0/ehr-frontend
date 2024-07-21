@@ -1,0 +1,17 @@
+.subGrid {
+  display: grid;
+  grid-template-columns: auto 10rem 8rem;
+  margin-bottom: 6px;
+  padding: 0 var(--global-gap);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--secondary-font-color);
+}
+
+.subGridBg {
+  background-color: var(--primary-bg-color);
+  padding: 1rem 0.8rem;
+  border-radius: var(--global-radius);
+  color: var(--primary-font-color);
+  font-size: 16px;
+}

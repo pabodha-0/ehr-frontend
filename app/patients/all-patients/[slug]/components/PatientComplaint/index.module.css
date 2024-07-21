@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: var(--global-gap); */
+  column-gap: calc(var(--global-gap) * 2);
+  margin-top: var(--global-gap);
+}
+
+.subGrid {
+  display: grid;
+  grid-template-columns: 20ch auto 12ch;
+  margin-bottom: var(--global-gap);
+  align-items: center;
+  gap: var(--global-gap);
+}
+
+.subGridHeader {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary-font-color);
+  margin-bottom: 4px;
+}
+
+.subGrid hr {
+  height: 1px;
+  width: 100%;
+  color: var(--secondary-bg-color);
+}

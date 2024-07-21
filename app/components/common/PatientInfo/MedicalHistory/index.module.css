@@ -40,3 +40,7 @@
   height: 1px;
   color: var(--secondary-bg-color);
 }
+
+.hiddenCheckbox {
+  display: none;
+}

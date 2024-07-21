@@ -1,0 +1,10 @@
+.main {
+  display: grid;
+  gap: var(--global-gap);
+}
+
+.equalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--global-gap);
+}

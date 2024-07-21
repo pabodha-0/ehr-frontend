@@ -15,27 +15,39 @@ const ExpandingList = () => {
 
   return (
     <div className={styles.main}>
-      <div className={showMedicalHistory ? "" : styles.hide}>
+      <div className={showMedicalHistory ? styles.unhide : styles.hide}>
         <div className={styles.transition}>
-          <MedicalHistory showMedicalHistory={showMedicalHistory} setShowMedicalHistory={setShowMedicalHistory} />
+          <MedicalHistory
+            showMedicalHistory={showMedicalHistory}
+            setShowMedicalHistory={setShowMedicalHistory}
+          />
         </div>
       </div>
 
-      <div className={showAllergies ? "" : styles.hide}>
+      <div className={showAllergies ? styles.unhide : styles.hide}>
         <div className={styles.transition}>
-          <Allergies showAllergies={showAllergies} setShowAllergies={setShowAllergies} />
+          <Allergies
+            showAllergies={showAllergies}
+            setShowAllergies={setShowAllergies}
+          />
         </div>
       </div>
 
-      <div className={showFamilyHistory ? "" : styles.hide}>
+      <div className={showFamilyHistory ? styles.unhide : styles.hide}>
         <div className={styles.transition}>
-          <FamilyHistory showFamilyHistory={showFamilyHistory} setShowFamilyHistory={setShowFamilyHistory} />
+          <FamilyHistory
+            showFamilyHistory={showFamilyHistory}
+            setShowFamilyHistory={setShowFamilyHistory}
+          />
         </div>
       </div>
 
-      <div className={showInvestigations ? "" : styles.hide}>
+      <div className={showInvestigations ? styles.unhide : styles.hide}>
         <div className={styles.transition}>
-          <Investigations showInvestigations={showInvestigations} setShowInvestigations={setShowInvestigations} />
+          <Investigations
+            showInvestigations={showInvestigations}
+            setShowInvestigations={setShowInvestigations}
+          />
         </div>
       </div>
       <div className={styles.grid}>

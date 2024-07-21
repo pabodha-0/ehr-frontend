@@ -28,12 +28,18 @@ const Treatment = () => {
           <div className={styles.internalDrugsGrid} key={i}>
             <InputWithSuggestion
               inputName="internalDrug"
-              suggestionList={["k"]}
+              suggestionList={[{ name: "k" }]}
             />
             <hr />
-            <InputWithSuggestion inputName="dosage" suggestionList={["k"]} />
+            <InputWithSuggestion
+              inputName="dosage"
+              suggestionList={[{ name: "k" }]}
+            />
             <hr />
-            <InputWithSuggestion inputName="frequency" suggestionList={["k"]} />
+            <InputWithSuggestion
+              inputName="frequency"
+              suggestionList={[{ name: "k" }]}
+            />
             <hr />
             <input type="text" className="inputField" />
             <hr />
@@ -64,12 +70,18 @@ const Treatment = () => {
           <div className={styles.externalDrugsGrid} key={i}>
             <InputWithSuggestion
               inputName="internalDrug"
-              suggestionList={["k"]}
+              suggestionList={[{ name: "k" }]}
             />
             <hr />
-            <InputWithSuggestion inputName="dosage" suggestionList={["k"]} />
+            <InputWithSuggestion
+              inputName="dosage"
+              suggestionList={[{ name: "k" }]}
+            />
             <hr />
-            <InputWithSuggestion inputName="frequency" suggestionList={["k"]} />
+            <InputWithSuggestion
+              inputName="frequency"
+              suggestionList={[{ name: "k" }]}
+            />
             <hr />
             <input type="text" className="inputField" />
             <hr />
